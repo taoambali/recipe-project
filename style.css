@@ -13,19 +13,16 @@
   font-style: normal;
 }
 
+/* general styling */
 
 * {
     margin: 0;
     padding: 0;
 }
 
-body {
-
-}
 
 ul, ol {
     list-style: none;
-
 }
 
 .container {
@@ -38,13 +35,16 @@ img {
     max-width: 100%;
 }
 
+.rounded-circle {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: hsl(332, 51%, 32%);
+    border-radius: 100%;
+}
 
 
 /* main css */
-.container .image {
-    
-}
-
 .container .image img {
     border-top-left-radius: 24px;
     border-top-right-radius: 24px;
@@ -60,9 +60,9 @@ img {
 }
 
 .sub-content {
-     font-family: "Outfit", sans-serif;
-     padding: 1.2rem 0;
-     color: hsl(30, 10%, 34%);
+    font-family: "Outfit", sans-serif;
+    padding: 1.2rem 0;
+    color: hsl(30, 10%, 34%);
 }
 
 .preparation {
@@ -76,14 +76,6 @@ img {
 .preparation  h3 {
     padding: 1rem 0;
     color: hsl(332, 51%, 32%);
-}
-
-.rounded-circle {
-    display: inline-block;
-    width: 5px;
-    height: 5px;
-    background-color: hsl(332, 51%, 32%);
-    border-radius: 100%;
 }
 
 .ingredients, .nutrition, .instructions {
@@ -106,25 +98,14 @@ img {
     padding: 0.5rem;
 }
 
-
-
-.preparation .preparation-content div .rounded-circle {
+.preparation .preparation-content div .rounded-circle,
+.ingredients .ingredients-content div .rounded-circle {
     align-self: center;
 }
 
 .instructions .instructions-content div .number {
         color: hsl(332, 51%, 32%);
         font-weight: 600;
-}
-
-@media (max-width: 500px) {
-    .instructions .instructions-content div  {
-        grid-template-columns: 10% 90%;
-
-    }   
-}
-
-.nutrition h2 {
 }
 
 .nutrition p,
@@ -134,6 +115,7 @@ img {
     font-family: "Outfit", sans-serif;
     color: hsl(30, 10%, 34%);
 }
+
 
 .nutrition p {
     padding: 1rem 0;
@@ -156,4 +138,23 @@ img {
 .nutrition .nutrition-content div:last-child {
     border-bottom: none;
 }
+
+/* media query */
+@media (max-width: 786px) {
+    .main-heading {
+    font-size: 1.8rem;
+    }  
+}
+
+@media (max-width: 500px) {
+    .instructions .instructions-content div  {
+        grid-template-columns: 10% 90%;
+
+    }  
+    
+    .main-heading {
+    font-size: 1.3rem;
+    }
+}
+
 
