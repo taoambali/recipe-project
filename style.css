@@ -38,6 +38,8 @@ img {
     max-width: 100%;
 }
 
+
+
 /* main css */
 .container .image {
     
@@ -68,17 +70,90 @@ img {
     padding: 1rem;
     background-color: hsl(330, 100%, 98%);
     border-radius: 1rem;
+    margin: 2rem 0;
 }
 
-.preparation  h4 {
+.preparation  h3 {
     padding: 1rem 0;
     color: hsl(332, 51%, 32%);
 }
 
-.preparation .rounded-circle {
+.rounded-circle {
     display: inline-block;
     width: 5px;
     height: 5px;
     background-color: hsl(332, 51%, 32%);
     border-radius: 100%;
 }
+
+.ingredients, .nutrition, .instructions {
+    margin: 2rem 0;
+}
+
+.ingredients h2,
+.nutrition h2,
+.instructions h2 { 
+    font-family: "Young-Serif", sans-serif;
+    color: hsl(332, 51%, 32%);
+    padding: 1rem 0;
+}
+
+.preparation .preparation-content div,
+.instructions .instructions-content div,
+.ingredients .ingredients-content div   {
+    display: grid;
+    grid-template-columns: 5% 97%;
+    padding: 0.5rem;
+}
+
+
+
+.preparation .preparation-content div .rounded-circle {
+    align-self: center;
+}
+
+.instructions .instructions-content div .number {
+        color: hsl(332, 51%, 32%);
+        font-weight: 600;
+}
+
+@media (max-width: 500px) {
+    .instructions .instructions-content div  {
+        grid-template-columns: 10% 90%;
+
+    }   
+}
+
+.nutrition h2 {
+}
+
+.nutrition p,
+.nutrition .nutrition-content,
+.instructions .instructions-content,
+.ingredients .ingredients-content {
+    font-family: "Outfit", sans-serif;
+    color: hsl(30, 10%, 34%);
+}
+
+.nutrition p {
+    padding: 1rem 0;
+}
+
+.nutrition .rose {
+    color: hsl(332, 51%, 32%);
+    font-weight: 600;
+}
+
+.nutrition .nutrition-content div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+.nutrition .nutrition-content div .name {
+    padding-left: 1.5rem;
+}
+
+.nutrition .nutrition-content div:last-child {
+    border-bottom: none;
+}
+
