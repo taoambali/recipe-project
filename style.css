@@ -108,6 +108,11 @@ img {
         font-weight: 600;
 }
 
+.instructions, .ingredients {
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+    padding-bottom: 1.5rem;
+}
+
 .nutrition p,
 .nutrition .nutrition-content,
 .instructions .instructions-content,
@@ -142,18 +147,37 @@ img {
 /* media query */
 @media (max-width: 786px) {
     .main-heading {
-    font-size: 1.8rem;
-    }  
+    font-size: 2.5rem;
+    } 
+    
+    .preparation .preparation-content div,
+    .instructions .instructions-content div,
+    .ingredients .ingredients-content div   {
+        grid-template-columns: 15% 97%;
+
+    }
 }
 
 @media (max-width: 500px) {
+
+    .container .image img {
+        border-radius: 0;
+    }
+
+    .main-heading {
+    font-size: 2rem;
+    }
+
     .instructions .instructions-content div  {
         grid-template-columns: 10% 90%;
 
     }  
     
+}
+
+@media (max-width: 375px) {
     .main-heading {
-    font-size: 1.3rem;
+        font-size: 1.5rem;
     }
 }
 
