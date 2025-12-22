@@ -146,9 +146,16 @@ img {
 
 /* media query */
 @media (max-width: 786px) {
+    .container {
+        padding: 48px;
+}
     .main-heading {
     font-size: 2.5rem;
     } 
+
+    .ingredients, .nutrition, .instructions {
+    margin: 1rem 0;
+    }
     
     .preparation .preparation-content div,
     .instructions .instructions-content div,
@@ -159,6 +166,9 @@ img {
 }
 
 @media (max-width: 500px) {
+        .container {
+            padding: 24px;
+        }
 
     .container .image img {
         border-radius: 0;
@@ -166,6 +176,14 @@ img {
 
     .main-heading {
     font-size: 2rem;
+    }
+
+    .preparation {
+    margin: 1rem 0;
+}
+
+        .ingredients, .nutrition, .instructions {
+    margin: 0.5rem 0;
     }
 
     .instructions .instructions-content div  {
